@@ -6,7 +6,7 @@ import { pricingTiers } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent monthly pricing for small business accounting. Essential $700/mo, Plus $1,000/mo, Controller $1,500/mo.",
+    "Monthly Accounting Services: Starter from $700, Growth from $1,000, and Controller from $1,500.",
 };
 
 export default function PricingPage() {
@@ -18,11 +18,12 @@ export default function PricingPage() {
             Pricing
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold text-navy-900 md:text-5xl">
-            Simple, monthly pricing
+            Monthly Accounting Services
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-            No hidden fees or surprise invoices. Pick the plan that matches your
-            business today — and scale up as your needs grow.
+            Professional accounting support designed for growing businesses.
+            Choose the Monthly Accounting Services level that fits your current
+            stage and financial visibility needs.
           </p>
         </div>
       </section>
@@ -51,22 +52,21 @@ export default function PricingPage() {
                 >
                   {tier.name}
                 </h2>
-                <div className="mt-4">
+                <p
+                  className={`mt-4 text-sm font-medium ${
+                    tier.highlighted ? "text-slate-200" : "text-slate-600"
+                  }`}
+                >
+                  Starting at{" "}
                   <span
-                    className={`text-4xl font-bold ${
+                    className={`text-3xl font-bold ${
                       tier.highlighted ? "text-white" : "text-navy-900"
                     }`}
                   >
                     ${tier.price.toLocaleString()}
                   </span>
-                  <span
-                    className={
-                      tier.highlighted ? "text-slate-300" : "text-slate-500"
-                    }
-                  >
-                    /month
-                  </span>
-                </div>
+                  /month
+                </p>
                 <p
                   className={`mt-3 text-sm ${
                     tier.highlighted ? "text-slate-300" : "text-slate-600"
@@ -122,9 +122,8 @@ export default function PricingPage() {
           </div>
 
           <p className="mt-10 text-center text-sm text-slate-500">
-            All plans are billed monthly. Pricing may vary based on transaction
-            volume and complexity — we&apos;ll confirm details during your
-            consultation.
+            Pricing depends on transaction volume, number of accounts, payroll
+            complexity, cleanup needs, and reporting requirements.
           </p>
         </div>
       </section>
@@ -137,8 +136,8 @@ export default function PricingPage() {
           <div className="mx-auto mt-10 max-w-3xl space-y-6">
             {[
               {
-                q: "What's included in every plan?",
-                a: "All plans include monthly bookkeeping, bank and credit card reconciliations, and standard financial statements. Higher tiers add bill pay support, variance reporting, payroll services, and dedicated review calls.",
+                q: "What's included in every Monthly Accounting Services level?",
+                a: "All Monthly Accounting Services levels include monthly bookkeeping, bank and credit card reconciliations, and standard financial statements. Higher levels add bill pay support, variance reporting, payroll services, and dedicated review calls.",
               },
               {
                 q: "Do you handle tax returns?",
@@ -149,8 +148,8 @@ export default function PricingPage() {
                 a: "Most clients are fully onboarded within 2–3 weeks. We'll review your current setup, connect accounts, and establish a monthly close schedule that works for your business.",
               },
               {
-                q: "Can I switch plans later?",
-                a: "Absolutely. As your business grows, your accounting needs change. We'll help you move to the right tier when the time comes.",
+                q: "Can I switch levels later?",
+                a: "Absolutely. As your business grows, your accounting needs change. We'll help you move to the right Monthly Accounting Services level when the time comes.",
               },
             ].map((faq) => (
               <div
@@ -168,7 +167,7 @@ export default function PricingPage() {
       </section>
 
       <CTA
-        title="Let's find the right plan for your business"
+        title="Let's find the right Monthly Accounting Services level for your business"
         description="Schedule a free consultation and we'll recommend the level of monthly support that makes sense for where you are today."
       />
     </>

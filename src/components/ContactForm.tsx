@@ -5,10 +5,49 @@ import { siteConfig } from "@/lib/constants";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setError(null);
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      firstName: String(formData.get("firstName") ?? "").trim(),
+      lastName: String(formData.get("lastName") ?? "").trim(),
+      email: String(formData.get("email") ?? "").trim(),
+      company: String(formData.get("company") ?? "").trim(),
+      serviceLevel: String(formData.get("serviceLevel") ?? "").trim(),
+      message: String(formData.get("message") ?? "").trim(),
+      companyWebsite: String(formData.get("companyWebsite") ?? "").trim(),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Unable to send your message.");
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch {
+      setError(
+        "We couldn't submit your message right now. Please try again or email us directly.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -118,21 +157,32 @@ export function ContactForm() {
 
       <div className="mt-5">
         <label
-          htmlFor="plan"
+          htmlFor="serviceLevel"
           className="block text-sm font-medium text-slate-700"
         >
-          Interested plan
+          Interested Monthly Accounting Services level
         </label>
         <select
-          id="plan"
-          name="plan"
+          id="serviceLevel"
+          name="serviceLevel"
           className="mt-1 block w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm shadow-sm focus:border-navy-800 focus:outline-none focus:ring-1 focus:ring-navy-800"
         >
           <option value="">Not sure yet</option>
-          <option value="essential">Essential — $700/mo</option>
-          <option value="plus">Plus — $1,000/mo</option>
-          <option value="controller">Controller — $1,500/mo</option>
+          <option value="starter">Starter — Starting at $700/month</option>
+          <option value="growth">Growth — Starting at $1,000/month</option>
+          <option value="controller">Controller — Starting at $1,500/month</option>
         </select>
+      </div>
+
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="companyWebsite">Company website</label>
+        <input
+          type="text"
+          id="companyWebsite"
+          name="companyWebsite"
+          tabIndex={-1}
+          autoComplete="off"
+        />
       </div>
 
       <div className="mt-5">
@@ -151,11 +201,14 @@ export function ContactForm() {
         />
       </div>
 
+      {error ? <p className="mt-4 text-sm text-red-600">{error}</p> : null}
+
       <button
         type="submit"
-        className="mt-6 w-full rounded-lg bg-navy-800 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-navy-700 sm:w-auto"
+        disabled={isSubmitting}
+        className="mt-6 w-full rounded-lg bg-navy-800 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-navy-700 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
-        Contact Crux CPA
+        {isSubmitting ? "Sending..." : "Contact Crux CPA"}
       </button>
     </form>
   );
@@ -195,6 +248,14 @@ export function ContactSidebar() {
           >
             {siteConfig.phone}
           </a>
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            Location
+          </p>
+          <p className="mt-1 block font-medium text-navy-800">
+            {siteConfig.location}
+          </p>
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">

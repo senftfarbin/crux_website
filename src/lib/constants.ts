@@ -3,8 +3,9 @@ export const siteConfig = {
   tagline: "Accurate books. Actionable financials. Better decisions.",
   description:
     "Monthly accounting support for small businesses that need accurate, actionable financials — clean books, reconciliations, bill pay, payroll coordination, and owner-ready reporting.",
-  email: "Steven@cruxacct.com",
+  email: "contact@cruxacct.com",
   phone: "(775) 527-3009",
+  location: "Salt Lake City, UT",
 };
 
 export const navLinks = [
@@ -56,40 +57,42 @@ export const services = [
 
 export const pricingTiers = [
   {
-    name: "Essential",
+    name: "Starter",
     price: 700,
-    description: "Solid monthly bookkeeping for businesses ready to move beyond basic records.",
+    description:
+      "For businesses that need accurate books and timely financial statements.",
     features: [
-      "Monthly bookkeeping & categorization",
+      "Monthly bookkeeping",
       "Bank & credit card reconciliations",
-      "Monthly financial statements",
-      "Email support",
+      "Basic financial statements",
+      "Month-end close support",
     ],
     highlighted: false,
   },
   {
-    name: "Plus",
+    name: "Growth",
     price: 1000,
-    description: "Full monthly accounting support with bill pay and variance reporting.",
+    description: "For businesses that need better visibility into performance.",
     features: [
-      "Everything in Essential",
-      "Bill pay support through Ramp",
-      "Monthly P&L variance reporting",
+      "Everything in Starter",
       "Payroll coordination",
-      "Quarterly financial review call",
+      "Bill pay support through Ramp",
+      "Monthly P&L review",
+      "Basic variance commentary",
     ],
     highlighted: true,
   },
   {
     name: "Controller",
     price: 1500,
-    description: "Comprehensive financial oversight for owners who want a true accounting partner.",
+    description:
+      "For businesses that need actionable financial information.",
     features: [
-      "Everything in Plus",
-      "Payroll processing or full coordination",
-      "Owner-ready reporting package",
-      "Monthly financial review call",
-      "Priority support & faster turnaround",
+      "Everything in Growth",
+      "Balance sheet review",
+      "P&L variance analysis",
+      "Cash flow visibility",
+      "Monthly owner check-in",
     ],
     highlighted: false,
   },

@@ -138,11 +138,12 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center">
             <h2 className="font-serif text-3xl font-semibold text-navy-900 md:text-4xl">
-              Straightforward monthly pricing
+              Monthly Accounting Services
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-slate-600">
-              No surprise fees. Choose the level of support that fits where your
-              business is today.
+              Professional support for growing businesses, with each Monthly
+              Accounting Services level aligned to the financial visibility you
+              need right now.
             </p>
           </div>
 
@@ -163,7 +164,12 @@ export default function Home() {
                 >
                   {tier.name}
                 </h3>
-                <p className="mt-2">
+                <p
+                  className={`mt-2 text-sm font-medium ${
+                    tier.highlighted ? "text-slate-200" : "text-slate-600"
+                  }`}
+                >
+                  Starting at{" "}
                   <span
                     className={`text-3xl font-bold ${
                       tier.highlighted ? "text-white" : "text-navy-900"
@@ -171,13 +177,7 @@ export default function Home() {
                   >
                     ${tier.price.toLocaleString()}
                   </span>
-                  <span
-                    className={
-                      tier.highlighted ? "text-slate-300" : "text-slate-500"
-                    }
-                  >
-                    /month
-                  </span>
+                  /month
                 </p>
                 <p
                   className={`mt-3 text-sm ${
@@ -190,9 +190,14 @@ export default function Home() {
             ))}
           </div>
 
+          <p className="mt-8 text-center text-sm text-slate-500">
+            Pricing depends on transaction volume, number of accounts, payroll
+            complexity, cleanup needs, and reporting requirements.
+          </p>
+
           <div className="mt-10 text-center">
             <Button href="/pricing" variant="outline">
-              Compare Plans
+              Compare Monthly Accounting Services
             </Button>
           </div>
         </div>

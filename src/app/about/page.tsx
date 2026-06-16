@@ -97,9 +97,9 @@ export default function AboutPage() {
             </h2>
             <p className="mt-4 leading-relaxed text-slate-600">
               We&apos;re not focused on tax season rush or one-size-fits-all
-              packages. Crux CPA is built around a monthly rhythm — consistent
-              bookkeeping, regular reconciliations, and reporting that helps you
-              run your business better every single month.
+              approaches. Crux CPA is built around Monthly Accounting Services
+              — consistent bookkeeping, regular reconciliations, and reporting
+              that helps you run your business better every single month.
             </p>
             <p className="mt-4 leading-relaxed text-slate-600">
               Whether you&apos;re a growing service business, a retail operation,

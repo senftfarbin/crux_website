@@ -64,8 +64,8 @@ export default function ServicesPage() {
               How it works
             </h2>
             <p className="mt-4 text-slate-600">
-              A consistent monthly rhythm that keeps your books current and your
-              decisions informed.
+              A consultative process built to strengthen your financial
+              foundation and give you decision-ready reporting.
             </p>
           </div>
 
@@ -73,21 +73,21 @@ export default function ServicesPage() {
             {[
               {
                 step: "01",
-                title: "Onboard & connect",
+                title: "Learn Your Business",
                 description:
-                  "We learn your business, connect your accounts, and set up a clean chart of accounts tailored to how you operate.",
+                  "We start by understanding your business, current processes, pain points, and financial reporting needs. This allows us to tailor our services and technology recommendations to your operations.",
               },
               {
                 step: "02",
-                title: "Monthly close & reconcile",
+                title: "Build Your Financial Foundation",
                 description:
-                  "Every month we categorize transactions, reconcile accounts, process bill pay, and coordinate payroll as needed.",
+                  "We implement and optimize the right tools and technology stack for your business, including accounting software, bill pay systems, payroll providers, expense management, and reporting workflows. Our goal is to create an efficient and scalable accounting process.",
               },
               {
                 step: "03",
-                title: "Review & decide",
+                title: "Deliver Accurate Financials",
                 description:
-                  "You receive owner-ready reports with variance analysis — financials you can trust and actually use.",
+                  "We complete monthly bookkeeping, account reconciliations, and month-end close procedures, then provide accurate financial statements and reporting to help you make informed business decisions.",
               },
             ].map((item) => (
               <div key={item.step} className="text-center">

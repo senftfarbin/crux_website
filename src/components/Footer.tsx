@@ -61,6 +61,7 @@ export function Footer() {
                   {siteConfig.phone}
                 </a>
               </li>
+              <li>{siteConfig.location}</li>
             </ul>
           </div>
         </div>
