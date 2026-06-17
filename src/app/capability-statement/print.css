@@ -1,0 +1,55 @@
+@page {
+  size: letter;
+  margin: 0.4in;
+}
+
+@media print {
+  header,
+  footer,
+  .download-bar {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: #0f172a !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .capability-statement {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+  }
+
+  .capability-header {
+    background: #f0f4f8 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0.15in !important;
+  }
+
+  .capability-body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0.1in !important;
+    padding-bottom: 0.1in !important;
+  }
+
+  .capability-footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0.08in !important;
+    padding-bottom: 0 !important;
+  }
+
+  a {
+    color: #1a365d !important;
+    text-decoration: none !important;
+  }
+}

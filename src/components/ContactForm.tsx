@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { DownloadCapabilityButton } from "@/components/DownloadCapabilityButton";
 import { siteConfig } from "@/lib/constants";
 
 export function ContactForm() {
@@ -256,6 +257,17 @@ export function ContactSidebar() {
           <p className="mt-1 block font-medium text-navy-800">
             {siteConfig.location}
           </p>
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            Capability Statement
+          </p>
+          <p className="mt-2 text-sm text-slate-600">
+            Review our one-page overview of services and qualifications.
+          </p>
+          <div className="mt-3">
+            <DownloadCapabilityButton variant="outline" className="w-full sm:w-auto" />
+          </div>
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">

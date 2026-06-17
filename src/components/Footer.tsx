@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DownloadCapabilityButton } from "@/components/DownloadCapabilityButton";
 import { navLinks, siteConfig } from "@/lib/constants";
 import { LogoMark } from "./LogoMark";
 
@@ -19,6 +20,9 @@ export function Footer() {
             </div>
             <p className="mt-4 text-sm leading-relaxed text-slate-400">
               {siteConfig.tagline}
+            </p>
+            <p className="mt-3">
+              <DownloadCapabilityButton variant="footer" />
             </p>
           </div>
 
