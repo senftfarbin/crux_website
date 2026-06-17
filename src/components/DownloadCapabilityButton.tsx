@@ -26,10 +26,22 @@ export function DownloadCapabilityButton({
   const pathname = usePathname();
   const isCapabilityPage = pathname === "/capability-statement";
 
+  if (isCapabilityPage) {
+    return (
+      <button
+        type="button"
+        onClick={() => window.print()}
+        className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition-colors ${variantStyles[variant === "footer" ? "primary" : variant]} ${className}`}
+      >
+        Download Capability Statement
+      </button>
+    );
+  }
+
   if (variant === "footer") {
     return (
       <Link
-        href="/capability-statement?print=1"
+        href="/capability-statement"
         className={`${variantStyles.footer} ${className}`}
       >
         Download Capability Statement
@@ -37,21 +49,9 @@ export function DownloadCapabilityButton({
     );
   }
 
-  if (isCapabilityPage) {
-    return (
-      <button
-        type="button"
-        onClick={() => window.print()}
-        className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition-colors ${variantStyles[variant]} ${className}`}
-      >
-        Download Capability Statement
-      </button>
-    );
-  }
-
   return (
     <Link
-      href="/capability-statement?print=1"
+      href="/capability-statement"
       className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition-colors ${variantStyles[variant]} ${className}`}
     >
       Download Capability Statement

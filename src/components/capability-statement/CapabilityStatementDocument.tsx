@@ -28,7 +28,7 @@ export function CapabilityStatementDocument() {
         </div>
         <div className="mt-3 h-0.5 w-16 bg-accent print:mt-1.5" />
         <p className="mt-2 text-xs font-medium uppercase tracking-wider text-slate-500 print:mt-1 print:text-[9px]">
-          Capability Statement
+          {capabilityStatement.documentLabel}
         </p>
       </header>
 
@@ -95,6 +95,15 @@ export function CapabilityStatementDocument() {
             </div>
           </section>
 
+          <div className="rounded-lg border border-accent/30 bg-navy-50 px-3 py-2.5 print:border-accent/40 print:bg-navy-50 print:px-2.5 print:py-2">
+            <p className="text-xs font-semibold tracking-wide text-navy-900 print:text-[10px]">
+              {capabilityStatement.credibilityCallout.headline}
+            </p>
+            <p className="mt-1 text-sm leading-snug text-slate-600 print:text-[10px] print:leading-snug">
+              {capabilityStatement.credibilityCallout.description}
+            </p>
+          </div>
+
           <section className="rounded-lg border border-slate-200 bg-slate-50 p-4 print:border-navy-800/15 print:bg-transparent print:p-2.5">
             <SectionHeading>Contact Information</SectionHeading>
             <div className="mt-3 space-y-1 text-sm print:mt-1.5 print:space-y-0.5 print:text-[10px]">
@@ -112,7 +121,14 @@ export function CapabilityStatementDocument() {
                   {capabilityStatement.contact.email}
                 </a>
               </p>
-              <p>{capabilityStatement.contact.website}</p>
+              <p>
+                <a
+                  href={`https://${capabilityStatement.contact.website}`}
+                  className="text-navy-800 print:no-underline"
+                >
+                  {capabilityStatement.contact.websiteLabel}
+                </a>
+              </p>
               <p>{capabilityStatement.contact.location}</p>
             </div>
           </section>

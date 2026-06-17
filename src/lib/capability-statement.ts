@@ -25,16 +25,18 @@ export const capabilityServiceGroups = [
       "Cash Flow Reporting",
       "P&L Variance Analysis",
       "Balance Sheet Review",
-      "Controller Services",
+      "Controller-Level Support",
     ],
   },
 ];
 
 export const capabilityStatement = {
+  documentLabel: "Accounting & Controller Services",
+  tagline: "Accurate Books. Actionable Financials. Better Decisions.",
   companyOverview: [
-    `${siteConfig.brandName} provides monthly accounting support for growing businesses that need accurate books and actionable financial information.`,
-    `Based in ${siteConfig.location}, we help business owners build reliable financial foundations — from clean bookkeeping and reconciliations to owner-ready reporting and cash flow visibility.`,
-    `${siteConfig.brandName} is the trade name of ${siteConfig.legalName}.`,
+    "Crux Accounting helps growing businesses maintain accurate financial records, streamline accounting processes, and gain confidence in their numbers. We provide reliable monthly accounting support, financial reporting, and operational guidance so business owners can make better decisions and focus on growth.",
+    "Based in Salt Lake City, UT, we help owners build reliable financial foundations — from clean bookkeeping and reconciliations to owner-ready reporting and cash flow visibility.",
+    "Crux Accounting is the trade name of Crux CPA PLLC.",
   ],
   serviceGroups: capabilityServiceGroups,
   whyCrux: [
@@ -56,13 +58,18 @@ export const capabilityStatement = {
       "Based in Salt Lake City, Utah, Steven works directly with clients to deliver accurate books, actionable financials, and greater confidence in their numbers.",
     ],
   },
+  credibilityCallout: {
+    headline: "CPA | Controller | FP&A Leader",
+    description:
+      "12+ years of accounting and finance experience supporting businesses from startups to multi-million-dollar organizations.",
+  },
   contact: {
     name: "Steven Senft, CPA",
     title: "Owner | Crux Accounting",
     email: "steven@cruxacct.com",
     website: siteConfig.website,
+    websiteLabel: "Learn more at cruxacct.com",
     location: "Salt Lake City, UT",
   },
-  tagline: siteConfig.headerTagline,
   legalDisclaimer: `${siteConfig.brandName} is the trade name of ${siteConfig.legalName}.`,
 };
