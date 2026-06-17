@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { navLinks, siteConfig } from "@/lib/constants";
+import { LogoMark } from "./LogoMark";
 
 export function Footer() {
   return (
@@ -7,14 +8,13 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <div className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-sm font-bold text-white">
-                C
-              </span>
+            <div className="flex items-center gap-3">
+              <LogoMark variant="light" />
               <div>
                 <p className="font-serif text-lg font-semibold text-white">
-                  {siteConfig.name}
+                  {siteConfig.brandName}
                 </p>
+                <p className="text-xs text-slate-400">{siteConfig.website}</p>
               </div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-slate-400">
@@ -68,8 +68,8 @@ export function Footer() {
 
         <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-slate-500">
           <p>
-            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} {siteConfig.legalName}. All
+            rights reserved.
           </p>
         </div>
       </div>

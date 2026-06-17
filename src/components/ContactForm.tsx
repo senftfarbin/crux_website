@@ -208,7 +208,7 @@ export function ContactForm() {
         disabled={isSubmitting}
         className="mt-6 w-full rounded-lg bg-navy-800 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-navy-700 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
-        {isSubmitting ? "Sending..." : "Contact Crux CPA"}
+        {isSubmitting ? "Sending..." : `Contact ${siteConfig.brandName}`}
       </button>
     </form>
   );

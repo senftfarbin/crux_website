@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { ContactForm, ContactSidebar } from "@/components/ContactForm";
+import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Schedule a consultation with Crux CPA PLLC. Get accurate monthly financials for your small business.",
+    `Schedule a consultation with ${siteConfig.brandName}. Get accurate monthly financials for your small business.`,
 };
 
 export default function ContactPage() {
@@ -20,8 +21,8 @@ export default function ContactPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
             Schedule a consultation to discuss your current accounting setup
-            and how Crux CPA can help you get accurate, actionable monthly
-            financials.
+            and how {siteConfig.brandName} can help you get accurate, actionable
+            monthly financials.
           </p>
         </div>
       </section>

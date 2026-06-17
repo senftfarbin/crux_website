@@ -1,3 +1,4 @@
+import { siteConfig } from "@/lib/constants";
 import { Button } from "./Button";
 
 interface CTAProps {
@@ -7,7 +8,7 @@ interface CTAProps {
 
 export function CTA({
   title = "Ready for financials you can trust?",
-  description = "Let's talk about your books, your business, and how Crux CPA can give you clearer monthly visibility with less stress.",
+  description = `Let's talk about your books, your business, and how ${siteConfig.brandName} can give you clearer monthly visibility with less stress.`,
 }: CTAProps) {
   return (
     <section className="bg-navy-800 py-16 md:py-20">
@@ -23,7 +24,7 @@ export function CTA({
             Schedule a Consultation
           </Button>
           <Button href="/contact" variant="outline" className="border-white text-white hover:bg-white/10">
-            Contact Crux CPA
+            Contact {siteConfig.brandName}
           </Button>
         </div>
       </div>

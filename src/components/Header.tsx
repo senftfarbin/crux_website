@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { navLinks } from "@/lib/constants";
+import { navLinks, siteConfig } from "@/lib/constants";
 import { Button } from "./Button";
+import { LogoMark } from "./LogoMark";
 
 export function Header() {
   const pathname = usePathname();
@@ -13,16 +14,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="group flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-800 text-sm font-bold text-white">
-            C
-          </span>
-          <div className="flex flex-col">
-            <span className="font-serif text-lg font-semibold leading-tight text-navy-900">
-              Crux CPA
+        <Link href="/" className="group flex items-center gap-3">
+          <LogoMark />
+          <div className="flex flex-col gap-0.5">
+            <span className="font-serif text-xl font-semibold leading-none text-navy-900">
+              {siteConfig.brandName}
             </span>
-            <span className="text-[10px] font-medium uppercase tracking-widest text-slate-500">
-              PLLC
+            <span className="hidden text-xs leading-snug text-slate-500 md:block">
+              {siteConfig.headerTagline}
             </span>
           </div>
         </Link>

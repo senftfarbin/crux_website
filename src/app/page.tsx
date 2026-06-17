@@ -19,10 +19,10 @@ export default function Home() {
               {siteConfig.tagline}
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-slate-600 md:text-xl">
-              For business owners who have outgrown basic bookkeeping. Crux CPA
-              delivers clean books, reconciled accounts, and monthly financials
-              you can actually use — so you spend less time worrying about
-              numbers and more time running your business.
+              For business owners who have outgrown basic bookkeeping.{" "}
+              {siteConfig.brandName} delivers clean books, reconciled accounts,
+              and monthly financials you can actually use — so you spend less
+              time worrying about numbers and more time running your business.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button href="/contact" variant="primary">
@@ -56,10 +56,10 @@ export default function Home() {
                 Financial visibility without the stress
               </h2>
               <p className="mt-4 leading-relaxed text-slate-600">
-                Crux CPA handles the monthly accounting work — bookkeeping,
-                reconciliations, bill pay, payroll coordination, and variance
-                reporting — so you always have accurate, actionable financials
-                at your fingertips.
+                {siteConfig.brandName} handles the monthly accounting work —
+                bookkeeping, reconciliations, bill pay, payroll coordination,
+                and variance reporting — so you always have accurate, actionable
+                financials at your fingertips.
               </p>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center">
             <h2 className="font-serif text-3xl font-semibold text-navy-900 md:text-4xl">
-              Why business owners choose Crux
+              Why business owners choose {siteConfig.brandName}
             </h2>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3">

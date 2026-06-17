@@ -1,8 +1,15 @@
 export const siteConfig = {
-  name: "Crux CPA PLLC",
+  brandName: "Crux Accounting",
+  legalName: "Crux CPA PLLC",
+  website: "cruxacct.com",
+  websiteUrl: "https://cruxacct.com",
   tagline: "Accurate books. Actionable financials. Better decisions.",
+  headerTagline: "Accurate Books. Actionable Financials.",
+  seoTitle: "Crux Accounting | Accurate Books. Actionable Financials.",
+  seoDescription:
+    "Bookkeeping, bill pay, payroll support, reconciliations, and financial reporting for growing businesses.",
   description:
-    "Monthly accounting support for small businesses that need accurate, actionable financials — clean books, reconciliations, bill pay, payroll coordination, and owner-ready reporting.",
+    "Crux Accounting provides monthly accounting support for small businesses that need accurate, actionable financials — clean books, reconciliations, bill pay, payroll coordination, and owner-ready reporting.",
   email: "contact@cruxacct.com",
   phone: "(775) 527-3009",
   location: "Salt Lake City, UT",

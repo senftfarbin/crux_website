@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
-import { pricingTiers } from "@/lib/constants";
+import { pricingTiers, siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -141,7 +141,7 @@ export default function PricingPage() {
               },
               {
                 q: "Do you handle tax returns?",
-                a: "Crux CPA focuses on monthly accounting and financial reporting — not tax preparation. We keep your books clean so your tax professional has accurate data when filing season comes.",
+                a: `${siteConfig.brandName} focuses on monthly accounting and financial reporting — not tax preparation. We keep your books clean so your tax professional has accurate data when filing season comes.`,
               },
               {
                 q: "How long does onboarding take?",

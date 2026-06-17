@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { CTA } from "@/components/CTA";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { services } from "@/lib/constants";
+import { services, siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Monthly bookkeeping, bill pay support, balance sheet reconciliations, payroll coordination, P&L variance reporting, and owner-ready financials.",
+    `${siteConfig.brandName} offers monthly bookkeeping, bill pay support, balance sheet reconciliations, payroll coordination, P&L variance reporting, and owner-ready financials.`,
 };
 
 export default function ServicesPage() {
@@ -21,10 +21,10 @@ export default function ServicesPage() {
             Monthly accounting that keeps up with your business
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-            Crux CPA is built for small business owners who need reliable
-            monthly financials — not just tax-season scrambling. Every service
-            is designed to give you accurate books and the visibility to make
-            better decisions.
+            {siteConfig.brandName} is built for small business owners who need
+            reliable monthly financials — not just tax-season scrambling. Every
+            service is designed to give you accurate books and the visibility
+            to make better decisions.
           </p>
         </div>
       </section>
