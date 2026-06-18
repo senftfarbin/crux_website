@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter, Source_Serif_4 } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { StructuredData } from "@/components/StructuredData";
+import { gaMeasurementId, isAnalyticsEnabled } from "@/lib/analytics";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
@@ -54,6 +56,9 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
+      {isAnalyticsEnabled && gaMeasurementId ? (
+        <GoogleAnalytics gaId={gaMeasurementId} />
+      ) : null}
     </html>
   );
 }
